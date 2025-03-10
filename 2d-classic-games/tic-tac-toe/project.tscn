@@ -1,0 +1,101 @@
+[gd_scene load_steps=4 format=3 uid="uid://cj1wulwoby423"]
+
+[ext_resource type="Script" path="res://PanelContainer.gd" id="1_emreh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5dr7v"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h3pkv"]
+bg_color = Color(0, 0.678431, 0.745098, 0.717647)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(400, 400)
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_emreh")
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="PanelContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="Button" type="Button" parent="PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_5dr7v")
+
+[node name="Button2" type="Button" parent="PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_5dr7v")
+
+[node name="Button3" type="Button" parent="PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_5dr7v")
+
+[node name="Button4" type="Button" parent="PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_5dr7v")
+
+[node name="Button5" type="Button" parent="PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_5dr7v")
+
+[node name="Button6" type="Button" parent="PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_5dr7v")
+
+[node name="Button7" type="Button" parent="PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_5dr7v")
+
+[node name="Button8" type="Button" parent="PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_5dr7v")
+
+[node name="Button9" type="Button" parent="PanelContainer/GridContainer"]
+custom_minimum_size = Vector2(130, 130)
+layout_mode = 2
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_5dr7v")
+
+[node name="Label" type="Label" parent="PanelContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
+theme_override_styles/normal = SubResource("StyleBoxFlat_h3pkv")
+horizontal_alignment = 1
+justification_flags = 0
+
+[node name="ResetButton" type="Button" parent="PanelContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+flat = true
