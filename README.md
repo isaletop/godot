@@ -20,5 +20,11 @@
   <img src="assets/screens/snake.png" height="200" alt="Screenshot"/>
 </p>
 
+### 4. Rogue
+**Dir:** `2d-classic-games/rogue`  
+<p align="center">
+  <img src="assets/screens/rogue.png" height="200" alt="Screenshot"/>
+</p>
+
 ## 🛠️ Requirements
 - Godot Engine 4.0+

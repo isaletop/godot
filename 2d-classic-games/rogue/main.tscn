@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcs1odbvn00ls"]
+
+[ext_resource type="Script" uid="uid://bud0t47yuvlo6" path="res://main.gd" id="1_ig7tw"]
+[ext_resource type="FontFile" uid="uid://bpljnl62w34pq" path="res://Anonymous.ttf" id="2_0xm2m"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ig7tw")
+
+[node name="DungeonLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_0xm2m")
+theme_override_font_sizes/font_size = 20
+
+[node name="InfoLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
