@@ -26,5 +26,14 @@
   <img src="assets/screens/rogue.png" height="200" alt="Screenshot"/>
 </p>
 
+## Other
+
+### 1. ToDo application
+**Dir:** `todo`
+<p align="center">
+  <img src="assets/screens/todo.png" height="200" alt="Screenshot"/>
+</p>
+
+
 ## 🛠️ Requirements
 - Godot Engine 4.0+
