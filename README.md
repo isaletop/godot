@@ -34,8 +34,14 @@
   <img src="assets/screens/todo.png" height="200" alt="Screenshot"/>
 </p>
 
-### 1. Bitcoin visualizer with mock data
+### 2. Bitcoin visualizer with mock data - part 1
 **Dir:** `3d/btcvisualizer-mock`
+<p align="center">
+  <img src="assets/screens/btc-visualizer-mock.png" height="200" alt="Screenshot"/>
+</p>
+
+### 3. Bitcoin visualizer with live data - part 2
+**Dir:** `3d/btcvisualizer-live`
 <p align="center">
   <img src="assets/screens/btc-visualizer-mock.png" height="200" alt="Screenshot"/>
 </p>
