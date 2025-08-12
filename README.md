@@ -26,6 +26,12 @@
   <img src="assets/screens/rogue.png" height="200" alt="Screenshot"/>
 </p>
 
+### 5. Tetris
+**Dir:** `2d-classic-games/tetris`
+<p align="center">
+  <img src="assets/screens/tetris.png" height="200" alt="Screenshot"/>
+</p>
+
 ## Other
 
 ### 1. ToDo application
