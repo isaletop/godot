@@ -47,7 +47,7 @@
 </p>
 
 
-### 4. Punch test - part 2
+### 4. Punch test
 **Dir:** `3d/punchtest`
 <p align="center">
   <img src="assets/screens/punchtest.png" height="200" alt="Screenshot"/>
