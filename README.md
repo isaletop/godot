@@ -38,6 +38,12 @@
   <img src="assets/screens/dino.png" height="200" alt="Screenshot"/>
 </p>
 
+### 7. Express Ship
+**Dir:** `2d-classic-games/express-ship`
+<p align="center">
+  <img src="assets/screens/express-ship.png" height="200" alt="Screenshot"/>
+</p>
+
 ## Other
 
 ### 1. ToDo application
