@@ -32,6 +32,12 @@
   <img src="assets/screens/tetris.png" height="200" alt="Screenshot"/>
 </p>
 
+### 6. Dino
+**Dir:** `2d-classic-games/dino`
+<p align="center">
+  <img src="assets/screens/dino.png" height="200" alt="Screenshot"/>
+</p>
+
 ## Other
 
 ### 1. ToDo application

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bywidiievg7wf"]
+
+[ext_resource type="Script" uid="uid://b8pncnbueyxry" path="res://Obstacle.gd" id="1_fxd4q"]
+[ext_resource type="Texture2D" uid="uid://ty43g8ab8w7" path="res://sprite.png" id="2_lmffn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uk3fe"]
+size = Vector2(30, 66)
+
+[node name="Cactus" type="Node2D"]
+script = ExtResource("1_fxd4q")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_uk3fe")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("2_lmffn")
+region_enabled = true
+region_rect = Rect2(448, 4, 30, 65)

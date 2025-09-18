@@ -1,0 +1,185 @@
+[gd_scene load_steps=21 format=3 uid="uid://d171mie0refyb"]
+
+[ext_resource type="Script" uid="uid://b1qv2xjs7acli" path="res://main.gd" id="1_a2c7x"]
+[ext_resource type="Script" uid="uid://c13j8htl6bgmb" path="res://CharacterBody2D.gd" id="1_ec7fr"]
+[ext_resource type="Texture2D" uid="uid://ty43g8ab8w7" path="res://sprite.png" id="1_xr3q1"]
+[ext_resource type="PackedScene" uid="uid://bywidiievg7wf" path="res://Obstacle.tscn" id="2_emeti"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sid1m"]
+size = Vector2(1153, 123)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1k6g"]
+atlas = ExtResource("1_xr3q1")
+region = Rect2(2030, 2, 88, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spqmr"]
+atlas = ExtResource("1_xr3q1")
+region = Rect2(1678, 2, 88, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1bvp3"]
+atlas = ExtResource("1_xr3q1")
+region = Rect2(0, 0, 2446, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lquwl"]
+atlas = ExtResource("1_xr3q1")
+region = Rect2(0, 64, 2446, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rctca"]
+atlas = ExtResource("1_xr3q1")
+region = Rect2(1854, 2, 88, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqk68"]
+atlas = ExtResource("1_xr3q1")
+region = Rect2(1942, 2, 88, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onm03"]
+atlas = ExtResource("1_xr3q1")
+region = Rect2(2206, 2, 118, 94)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqv12"]
+atlas = ExtResource("1_xr3q1")
+region = Rect2(2324, 2, 118, 94)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_73sbp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1k6g")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_spqmr")
+}],
+"loop": true,
+"name": &"idle_and_jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1bvp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lquwl")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rctca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqk68")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onm03")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vqv12")
+}],
+"loop": true,
+"name": &"sit",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_db0em"]
+size = Vector2(37, 89)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5wlrx"]
+radius = 24.0
+height = 88.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7mycd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_272bh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1bvp3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lquwl"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_a2c7x")
+obstacle_scene = ExtResource("2_emeti")
+
+[node name="Ground" type="StaticBody2D" parent="."]
+position = Vector2(0, -112)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground"]
+position = Vector2(576.5, 598.5)
+shape = SubResource("RectangleShape2D_sid1m")
+
+[node name="Ground1" type="Sprite2D" parent="Ground"]
+position = Vector2(1198, 526)
+texture = ExtResource("1_xr3q1")
+region_enabled = true
+region_rect = Rect2(2.08165e-12, 100, 2400, 30)
+
+[node name="Ground2" type="Sprite2D" parent="Ground"]
+position = Vector2(3592, 526)
+texture = ExtResource("1_xr3q1")
+region_enabled = true
+region_rect = Rect2(2.08165e-12, 100, 2400, 30)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(220, 301)
+script = ExtResource("1_ec7fr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(15, 2.08165e-12)
+sprite_frames = SubResource("SpriteFrames_73sbp")
+animation = &"sit"
+frame_progress = 0.744408
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(6.5, -2.5)
+shape = SubResource("RectangleShape2D_db0em")
+
+[node name="Area2D" type="Area2D" parent="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Area2D"]
+position = Vector2(35, -2)
+shape = SubResource("CapsuleShape2D_5wlrx")
+
+[node name="ScoreLabel" type="Label" parent="."]
+offset_left = 879.0
+offset_top = 34.0
+offset_right = 940.0
+offset_bottom = 57.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Score: 0"
+
+[node name="Restart" type="Sprite2D" parent="."]
+position = Vector2(576, 233)
+texture = ExtResource("1_xr3q1")
+region_enabled = true
+region_rect = Rect2(507, 130, 70, 60)
+
+[node name="Button" type="Button" parent="Restart"]
+process_mode = 3
+offset_left = -38.0
+offset_top = -30.0
+offset_right = 36.0
+offset_bottom = 33.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7mycd")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_272bh")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_1bvp3")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_lquwl")
+
+[node name="GameOver" type="Sprite2D" parent="."]
+position = Vector2(576, 135)
+texture = ExtResource("1_xr3q1")
+region_enabled = true
+region_rect = Rect2(1293, 27, 384, 25)
+
+[connection signal="body_entered" from="CharacterBody2D/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="pressed" from="Restart/Button" to="." method="_on_button_pressed"]
