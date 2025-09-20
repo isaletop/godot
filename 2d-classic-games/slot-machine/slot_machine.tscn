@@ -1,0 +1,104 @@
+[gd_scene load_steps=5 format=3 uid="uid://diagwv4pwebd3"]
+
+[ext_resource type="Script" uid="uid://m3brebovvtlm" path="res://slot_machine.gd" id="1_q08ns"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_agdmm"]
+bg_color = Color(0.176941, 0.647431, 0.86649, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmlme"]
+bg_color = Color(0.779349, 0.388205, 0.993644, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i6cki"]
+bg_color = Color(0.663984, 0.471967, 1, 1)
+
+[node name="SlotMachine" type="Node2D"]
+script = ExtResource("1_q08ns")
+
+[node name="Panel" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Drum1" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 50.0
+offset_bottom = 87.0
+scale = Vector2(3, 3)
+
+[node name="SymbolLabel1" type="Label" parent="Panel/Drum1"]
+layout_mode = 2
+
+[node name="SymbolLabel2" type="Label" parent="Panel/Drum1"]
+layout_mode = 2
+
+[node name="SymbolLabel3" type="Label" parent="Panel/Drum1"]
+layout_mode = 2
+
+[node name="Drum2" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 10.0
+offset_right = 160.0
+offset_bottom = 87.0
+scale = Vector2(3, 3)
+
+[node name="SymbolLabel1" type="Label" parent="Panel/Drum2"]
+layout_mode = 2
+
+[node name="SymbolLabel2" type="Label" parent="Panel/Drum2"]
+layout_mode = 2
+
+[node name="SymbolLabel3" type="Label" parent="Panel/Drum2"]
+layout_mode = 2
+
+[node name="Drum3" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 10.0
+offset_right = 270.0
+offset_bottom = 87.0
+scale = Vector2(3, 3)
+
+[node name="SymbolLabel1" type="Label" parent="Panel/Drum3"]
+layout_mode = 2
+
+[node name="SymbolLabel2" type="Label" parent="Panel/Drum3"]
+layout_mode = 2
+
+[node name="SymbolLabel3" type="Label" parent="Panel/Drum3"]
+layout_mode = 2
+
+[node name="SpinButton" type="Button" parent="."]
+offset_left = -13.0
+offset_top = 237.0
+offset_right = 541.0
+offset_bottom = 408.0
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_agdmm")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_nmlme")
+theme_override_styles/normal = SubResource("StyleBoxFlat_i6cki")
+text = "Spin!"
+
+[node name="ResultLabel" type="Label" parent="."]
+offset_left = 350.0
+offset_top = 98.0
+offset_right = 390.0
+offset_bottom = 153.0
+theme_override_font_sizes/font_size = 40
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2(399, 31)
+scale = Vector2(1.63158, 1.16667)
+color = Color(1, 1, 1, 0.380392)
+polygon = PackedVector2Array(-256, 40, -256, -40, 88, -40, 88, 40)
+uv = PackedVector2Array(-232, 32, -232, -40, 72, -40, 72, 32)
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2(411, 214)
+scale = Vector2(1.63158, 1.16667)
+color = Color(1, 1, 1, 0.380392)
+polygon = PackedVector2Array(-256, 16, -256, -40, 88, -40, 88, 16, -80, 16)
+uv = PackedVector2Array(-256, 24, -256, -40, 88, -40, 88, 24, -80, 24)

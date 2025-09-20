@@ -44,6 +44,13 @@
   <img src="assets/screens/express-ship.png" height="200" alt="Screenshot"/>
 </p>
 
+
+### 8. Slot Machine
+**Dir:** `2d-classic-games/slot-machine`
+<p align="center">
+  <img src="assets/screens/slot-machine.png" height="200" alt="Screenshot"/>
+</p>
+
 ## Other
 
 ### 1. ToDo application
